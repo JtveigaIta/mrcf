@@ -1,3 +1,4 @@
+---
 ```markdown
 # 🛡️ Direitos Autorais e Propriedade Intelectual
 
