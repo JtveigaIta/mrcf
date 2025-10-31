@@ -226,7 +226,6 @@ Se você utilizar ou referenciar este projeto em pesquisas, relatórios ou publi
 
 Ou, em formato **BibTeX**:
 
-```bibtex
 @inproceedings{veiga2025mrcf,
   author    = {Jackson T. Veiga},
   title     = {Mission Replanning and Control Framework (MRCF): A Strategic Architecture for BVLOS Operations in UTM Environments},
@@ -244,7 +243,9 @@ Ou, em formato **BibTeX**:
 
 [4] J. T. Veiga, “An Open Framework for UAS Mission Replanning: From Intellectual Property to Collaborative Research,” in *Proceedings of the [Conference AIAA]*, 2025. (Versão Completa em Revisão)  
 
-[4] F. L. S. D. Santos, “pyAutonomousAgent: An academic tool for modeling autonomous agent behaviors using behavior trees,” *JATM*, 2023. [Online]. Available: [https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/](https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/)
+[5] F. L. S. D. Santos, “pyAutonomousAgent: An academic tool for modeling autonomous agent behaviors using behavior trees,” *JATM*, 2023. [Online]. Available: [https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/](https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/)
+
+---
 
 # 🛡️ Direitos Autorais e Propriedade Intelectual (Rodapé)
 
