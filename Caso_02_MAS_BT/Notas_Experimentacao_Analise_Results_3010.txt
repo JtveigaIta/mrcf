@@ -1,0 +1,39 @@
+agora eu quero as discussoes dos resultados explicando a tabela, conforme o exemplo do primeiro caso:
+
+Case Study 1 evaluated the patrol performance of three autonomous UAVs executing fixed routes without inter-agent coordination. The simulation parameters were: three UAVs (D1, D2, D3), 200 ticks per run, behavior trees (BT) controlling autonomy, and no multi-agent contract negotiation (contract frequency set to 9999). The objective was to observe emergent inefficiencies due to independent decision-making
+
+Porem, agora para este caso, considerou-se o seguinte, 
+para o Case Study 2 (Replanejamento Baseado em Coalizão/MAS) é o cerne do seu trabalho.
+Para permitir que o MAS atue e reconfigure a missão, você precisa de três ajustes principais:
+Ativar o MAS no arquivo de configuração.
+Adicionar Lógica de Eventos Dinâmicos no loop da simulação.
+Implementar a Lógica de Reconfiguração de Missão após o MAS formar a coalizão.
+
+Para isso ser possivel, foi feito um ajuste nos parametros de entrada da missao: O ajuste principal é a redução da frequência de contrato para um valor baixo (ex: 20), ativando o MAS
+
+Tambem foram feitos os seguintes ajustes na simulação:
+A função run_simulation será modificada para:
+Simular um evento de falha do Drone D2 no t=100.
+Simular um novo Ponto de Interesse (POI) no t=150, que exige a habilidade "rescue".
+Implementar a Lógica de Reconfiguração: Após o MAS formar a coalizão no t=150, o drone recrutado terá sua missão de patrulha substituída por uma missão de POI.
+
+Para que o drone falho (status='FAILURE') pare de tentar patrulhar, precisamos que a Action_Patrol verifique o status.
+
+Agora eu nao entendi, porque  na configuracao para rodar os batchs, com MAS, foi preciso inserir falhas nas BTs dos drones para ficar reconfigurando missao, notei que isso acontece com certa frequencia enquanto simula, e tambem foi possivel observar maior numero de drones tendo que voltar a base e recarregar. Porem nao sei se era isso o comportamento que eu esperava. Tambem os valores final, parece que ficou pior com a operação só com BT. Entao o foco nao seria falhas, mas sim as métricas diminuirem , e o MAS identificar isso e tentar otimizar, retornando o drone e mandando outro para melhorar os valores de average da patrulha medidos, outro ponto que nao acontece no código e que precisarei ajustar, seria a mudança da BT ou mudar o drone? Isso é uma duvida, preciso verificar com mais detalhes sobre o momento que acontece uma nova formacao de contrato, o porque acontece e o estado dos parametros do drone que precisou mudar ..
+
+CONCLUSAO E TRABALHOS FUTUROS.
+
+qual seria a possivel conclusão e trabalhos futuros. Eu gostaria de destacar a importancia, que notei do vies da representação do que queremos analisar, apesar dos testes do simulador parecer promissor, as analises quantittivas - "mostram o que" foi positivo o uso do MRCF, ele desempenhou melhor com relação ao conhecimento de todos drones para reconfigurar e atender a missao? Alem disso, nao foram implementados otimizadores de rotas, tambem o controle PID nao esta realisitoc assim como o comportamento dinamico do drone está 2doF, para efeito de estudo foi ignorado o 6dof do planador Skywalker, isso pode ter impactado no viaual sem os batchs poderiam ser feitos estes ajustes, pois varios erros conceituais de doutrina de voo já foram notados. Porem o foco estava em ignorar isso e perceber se realmente o replan com MRCF iria se auto-ajustar e apresentar melhores formas na missao de patrulha,. Os resultados demosntraram entao "falar em resumo da analise quantitativa",. Para trabalhos futuros, espera-se divulgar o MRCF ao comunidade academica, aoferencendo um diagrama de todos os componrenets que podem ser implementados, e melhorar a acreditacao do simulador, no sentido de possuir os modulos reais alem do MRCF já implementado. O  autor irá continuar as pesquisas com a implementacao do MIRF que é um modulo de falha , para resolver problemas de conflitos e segurança de BVLOS com UTM, isso então irá envover diferentes domínicos, como o aprendizado profundo, redes de conhecimento - mencionar tambem novas possibildiades de participação.
+
+CONCLUSÕES AJUSTADAS JTVEIGA:
+
+tem um erro grosseiro nas conclusoes e trabalhos futuros, nao senti que o foco ficou nos resultados numericos observados, eu preciso de um valor de grandeza comparativo , com base nas tabelas oferecidas, em relação Area Couverage e Route redundancy do caso 1 em comparacao com caso ii. E tambem sobre a fidelidade e os casos da dinamica de voo e otimizaç~eos de rota é uma possivel causa, que pode ser melhorado em trabalhos futuros nao é o foco desse trabalho. Nas conclusoes deve ficar primeiro claro o foco do trabalho que foi verificar a efetividade do MRCF, com o comportamento distribuido e autonomo dos agentes cooperando entre si , num caso de missões de patrulha com multiplos drones.
+-----------------------
+
+\section{V. Conclusions and Future Work}
+
+This study highlighted the adaptive capabilities of a coalition-based mission replanning framework (MRCF) for multi-UAV patrols. Quantitative analyses demonstrated that, even under simplified UAV dynamics (2-DoF instead of the full 6-DoF of the Skywalker glider) and without realistic PID control or route optimizers, the MRCF effectively redistributed tasks among UAVs and maintained continuous coverage. The results indicate that having a centralized knowledge of all UAV states within the MAS enables better reallocation and mission execution compared to independent UAV operations. 
+
+Despite the promising performance observed in the simulations, several limitations were noted. Simplifications in UAV dynamics, ignored aerodynamic constraints, and conceptual deviations from actual flight doctrine may impact the realism of the results. Nonetheless, the focus of this study was to evaluate whether the MRCF could self-adjust and improve mission performance through coalition-based replanning, which was successfully demonstrated by the quantitative metrics.
+
+For future work, the MRCF will be disseminated to the academic community along with a detailed diagram of all implementable components. Efforts will also focus on enhancing simulator fidelity by integrating real modules beyond the current MRCF implementation. Additionally, research will continue with the development of the Mission Integrity and Replanning Framework (MIRF), a fault-handling module designed to address conflicts and enhance BVLOS safety under UTM regulations. This will involve integrating techniques from deep learning, knowledge networks, and collaborative decision-making, opening new possibilities for academic participation and operational validation.

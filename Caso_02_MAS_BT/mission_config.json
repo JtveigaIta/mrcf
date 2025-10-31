@@ -1,0 +1,45 @@
+{
+    "simulation_ticks": 300,
+    "tick_delay_seconds": 0.1,
+    "pyfly_config_path": "mock_config.txt",
+    "pyfly_param_path": "mock_param.txt",
+    "mas_config": {
+        "contract_frequency": 20, 
+        "contract_skills": ["search", "rescue"]
+    },
+    "drones": [
+        {
+            "id": "D1",
+            "skills": ["search"],
+            "cost": 1,
+            "time": 1,
+            "quality": 1,
+            "initial_battery": 80,
+            "initial_position": [1.0, 1.0],
+            "route_type": "fixed_patrol",
+            "route": [[2, 8], [8, 8], [8, 2], [2, 2]]
+        },
+        {
+            "id": "D2",
+            "skills": ["rescue"],
+            "cost": 2,
+            "time": 2,
+            "quality": 2,
+            "initial_battery": 90,
+            "initial_position": [9.0, 9.0],
+            "route_type": "fixed_patrol",
+            "route": [[8, 1], [1, 1], [1, 8], [8, 8]]
+        },
+        {
+            "id": "D3",
+            "skills": ["search", "rescue"],
+            "cost": 1.5,
+            "time": 1.5,
+            "quality": 1.5,
+            "initial_battery": 100,
+            "initial_position": [5.0, 5.0],
+            "route_type": "fixed_patrol",
+            "route": [[5, 9], [9, 5], [5, 1], [1, 5]]
+        }
+    ]
+}
