@@ -214,20 +214,7 @@ Citações devem incluir o nome do autor e o título do trabalho.
 > *© 2025 Jackson Tavares Veiga. Todos os direitos reservados.*
 
 ---
-
-# 🛡️ Direitos Autorais e Propriedade Intelectual (Rodapé)
-
-**Propriedade Intelectual:** Arquitetura de Controle Multi-Agente para Replanejamento de Missões de VANTs
-**Autor Registrado:** Jackson Tavares Veiga
-**Depósito:** Escritório de Direitos Autorais - Fundação Biblioteca Nacional
-**Registro:** E0000000020250917001514721634186
-**Data:** 17 de setembro de 2025
-**© Todos os Direitos Reservados**
-
-```
 ## 📚 Referências
-
----
 
 ## 📖 Como Citar Este Trabalho
 
@@ -250,7 +237,6 @@ Ou, em formato **BibTeX**:
   email     = {jackson.veiga.101422@ga.ita.br}
 }
 
-
 [2] J. T. Veiga, M. A. Pessoa, F. Junqueira, P. E. Miyagi, and D. J. dos Santos Filho,  
 “A systematic modelling procedure to design agent-oriented control to coalition of capabilities—in the context of I4.0 as virtual assets (AAS),” *Computers*, vol. 10, no. 12, p. 161, 2021.  
 
@@ -259,4 +245,14 @@ Ou, em formato **BibTeX**:
 [4] J. T. Veiga, “An Open Framework for UAS Mission Replanning: From Intellectual Property to Collaborative Research,” in *Proceedings of the [Conference AIAA]*, 2025. (Versão Completa em Revisão)  
 
 [4] F. L. S. D. Santos, “pyAutonomousAgent: An academic tool for modeling autonomous agent behaviors using behavior trees,” *JATM*, 2023. [Online]. Available: [https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/](https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/)
+
+# 🛡️ Direitos Autorais e Propriedade Intelectual (Rodapé)
+
+- **Propriedade Intelectual:** Arquitetura de Controle Multi-Agente para Replanejamento de Missões de VANTs  
+- **Autor Registrado:** Jackson Tavares Veiga  
+- **Depósito:** Escritório de Direitos Autorais - Fundação Biblioteca Nacional  
+- **Registro:** E0000000020250917001514721634186  
+- **Data:** 17 de setembro de 2025  
+- **© Todos os Direitos Reservados**
+
 
