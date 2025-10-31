@@ -1,5 +1,3 @@
----
-```markdown
 # 🛡️ Direitos Autorais e Propriedade Intelectual
 
 **Arquitetura de Controle Multi-Agente para Replanejamento de Missões de VANTs (MRCF)**  
